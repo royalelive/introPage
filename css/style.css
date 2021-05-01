@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box; 
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.42; 
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    width:100%;
+    height:100vh;
+    background-color:#232d50;
+    opacity:0.78;
+}
+
+.main {
+    height: 100vh;
+    min-height: 650px;
+    background: url(../img/bg/Layer_2.png) center/cover no-repeat;
+    color: #ffffff;
+    position: relative;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1300px;
+}
+
+.header {
+	background-color: #15263e;
+	position: relative;
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 40px 0;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+}
+
+.nav__link {
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.main__content {
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	text-transform: uppercase;
+	font-weight: 200;
+}
+
+
+.main__text {
+
+}
+
+.main__prediction {
+	font-size: 56px;
+	font-weight: 600;
+	margin: 5px 0;
+	line-height: 1;
+	word-spacing: 0.2em;
+	letter-spacing: 0.1em;
+
+}
+.main__title {
+
+}
+
+.main__title-firstpart {
+	font-size: 170px;
+	font-weight: 600;
+	margin: 5px 0;
+	line-height: 0.8;
+	letter-spacing: 0.05em;
+	background: linear-gradient(49deg, #a21af0 40%, #ff0072 60%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.main__title-secondpart {
+	font-size: 80px;
+	font-weight: 600;
+	margin: 5px 0;
+	line-height: 1;
+	letter-spacing: 0.3em;
+}
+
+.main__desc {
+	font-size: 30px;
+	font-weight: 600;
+	margin: 20px 0;
+	line-height: 0.5;
+	word-spacing: 0.3em;
+}
+
+.main__btn {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.main__btn-link {
+	padding: 20px 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+	background: linear-gradient(49deg, #a21af0 30%, #ff0072 80%);
+	font-size: 22px;
+}
