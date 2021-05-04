@@ -51,7 +51,7 @@ body {
 .container {
 	width: 90%;
 	margin: 0 auto;
-	max-width: 1300px;
+	max-width: 1400px;
 }
 
 .header {
@@ -145,4 +145,68 @@ body {
 	background: linear-gradient(49deg, #a21af0 30%, #ff0072 80%);
 	font-size: 22px;
 	
+}
+
+.about__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 0;
+	background: url(../img/bg/Layer_3.png) center/contain no-repeat;
+}
+
+.about__content-text {
+	width: 30%;
+	min-width: 200px;
+	text-align: right;
+}
+
+.about__title {
+	text-transform: uppercase;
+	font-size: 42px;
+	margin-bottom: 0;
+	line-height: 0.8em;
+}
+
+.about__title-prediction {
+	text-transform: uppercase;
+	font-size: 24px;
+	color: #a21af0;
+	letter-spacing: 0.1em;
+	margin: 0;
+	padding-bottom: 35px;
+}
+
+.about__desc {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+}
+
+.about__content-statistic {
+	width: 25%;
+	min-width: 200px;
+}
+
+.about__statistic-list {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+}
+
+.about__statistic-item {
+	padding: 22px 0;
+}
+
+.about__statistic-value {
+	text-transform: uppercase;
+	font-size: 24px;
+	padding-bottom: 15px;
+}
+
+.about__statistic-line {
+	height: 16px;
+	background: linear-gradient(49deg, #a21af0 40%, #ff0072 60%);
+	border-radius: 15px;
 }
