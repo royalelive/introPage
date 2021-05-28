@@ -66,7 +66,7 @@ body {
 	z-index: 100;
 }
 
-.wrapper_pointer {
+.wrapper_pointer *{
 	cursor: pointer;
 }
 
@@ -257,6 +257,7 @@ body {
 	background: linear-gradient(49deg, #a21af0 30%, #ff0072 80%);
 	font-size: 22px;
 	white-space: nowrap;
+	transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 .about__container {
@@ -488,7 +489,7 @@ body {
 }
 
 .comments__container {
-	margin: 130px 0 220px 0;
+	padding: 130px 0 220px 0;
 }
 
 .comments__title {
@@ -649,6 +650,8 @@ body {
 	left: 0;
 	align-self: flex-start;
 	display: none;
+	margin-bottom: 10px;
+	margin-left: 8px;
 }
 
 .portfolio__nav-phone_image {
@@ -1095,7 +1098,7 @@ body {
 	}
 
 	.comments__container {
-    	margin: 110px 0px 120px;
+    	padding: 110px 0px 120px;
 	}
 
 	.comments__content {
@@ -1467,7 +1470,7 @@ body {
 	}
 
 	.comments__container {
-	    margin: 70px 0px 80px;
+	    padding: 70px 0px 80px;
 	}
 
 	.comments__content-text::before {
@@ -1503,11 +1506,15 @@ body {
 	.portfolio__nav-list {
 		height: 0;
 		overflow: hidden;
-		transition: height 1.2s ease ;
+		transition: height 1s ease ;
 	}
 
 	.portfolio__nav-list.active {
 		height: 21em;
+	}
+
+	.portfolio__nav-item {
+    	margin-left: 10px;
 	}
 
 	.gallery__images-list {
@@ -1522,6 +1529,10 @@ body {
 
 	.gallery__images-item:last-child {
 		margin-bottom: 40px;
+	}
+
+	.portfolio__gallery {
+		margin-top: 20px;
 	}
 
 	.portfolio__gallery-item {
@@ -1716,7 +1727,7 @@ body {
 	    height: 100px;
 	}
 	.comments__container {
-	    margin: 40px 0px 50px;
+	    padding: 40px 0px 50px;
 	}
 
 	.comments__title {

@@ -8,7 +8,7 @@ const navPortfolioList = document.querySelector('.portfolio__nav-list');
 navButton.addEventListener('click', function(event) {
 	navPhone.classList.add('active');
 	phoneOverlay.classList.add('active');
-	wrapper.classList.add('wrapper_pointer');
+	//wrapper.classList.add('wrapper_pointer');
 
 });
 
@@ -17,7 +17,7 @@ wrapper.addEventListener('click', function(event) {
 	if (event.target.closest('.phone__content') == null) {
 		navPhone.classList.remove('active');
 		phoneOverlay.classList.remove('active');
-		wrapper.classList.remove('wrapper_pointer');
+		//wrapper.classList.remove('wrapper_pointer');
 	}
 });
 
