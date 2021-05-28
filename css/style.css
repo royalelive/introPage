@@ -47,6 +47,29 @@ body {
     overflow: hidden;
 }
 
+.wrapper__content {
+	flex: 1 0 auto;
+}
+
+.phone__overlay {
+	position: fixed;
+    width:100%;
+    height:100%;
+    background-color:#232d50;
+    opacity:0;
+    z-index: -10;
+    transition: opacity 1.2s ease ;
+}
+
+.phone__overlay.active {
+	opacity:0.9;
+	z-index: 100;
+}
+
+.wrapper_pointer {
+	cursor: pointer;
+}
+
 .main__overlay {
     position: absolute;
     width:100%;
@@ -74,6 +97,31 @@ body {
 	position: relative;
 }
 
+.nav__phone_btn {
+	width: 60px;
+	height: 55px;
+	display: none;
+	position: absolute;
+	left: 15%;
+	top: 10%;
+	transform: translate(-50%, -50%);
+}
+
+.nav__phone_btn-image {
+ 	width: 100%;
+ 	height: 100%;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-around;
+}
+
+.nav__phone_btn-component {
+	width: 100%;
+	height: 7px;
+	border-radius: 5px;
+	background: linear-gradient(39deg, #a21af0 0%, #ff0072 90%);
+}
+
 .nav__list {
 	display: flex;
 	justify-content: center;
@@ -89,9 +137,6 @@ body {
 	text-transform: uppercase;
 }
 
-.nav__item {
-
-}
 
 .nav__item::after {
 	content: "-";
@@ -105,6 +150,40 @@ body {
 	content: "";
 	margin: 0
 
+}
+
+.nav__phone {
+	background-color: #15263e;
+	width: 70%;
+	height: 100vh;
+	position: fixed;
+	padding: 30px;
+	z-index: 9999;	
+	left: -110%;
+	transition: left 1.2s ease ;
+}
+
+.nav__phone.active {
+	left: 0;
+
+}
+
+.nav__phone-list {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	letter-spacing: 0.1em;
+	font-size: 18px;
+}
+
+.nav__phone-link {
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.nav__phone-item {
+	padding-bottom: 20px;
 }
 
 .main__content {
@@ -177,7 +256,7 @@ body {
     color: #ffffff;
 	background: linear-gradient(49deg, #a21af0 30%, #ff0072 80%);
 	font-size: 22px;
-	
+	white-space: nowrap;
 }
 
 .about__container {
@@ -563,12 +642,39 @@ body {
 	justify-content: center;
 }
 
+.portfolio__nav-phone_button {
+	width: 50px;
+	height: 45px;
+	position: relative;
+	left: 0;
+	align-self: flex-start;
+	display: none;
+}
+
+.portfolio__nav-phone_image {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.portfolio__nav-phone_image-component {
+	width: 100%;
+	height: 7px;
+	border-radius: 10px;
+	background: #4d4d4d;
+}
+
 .portfolio__nav-list {
 	display: flex;
 	flex-direction: column;
 	margin-right: 60px;
 	margin-top: 15px;
 }
+
+
+
 
 .portfolio__nav-item {
 	font-size: 26px;
@@ -781,6 +887,7 @@ body {
 .contact_us {
 	background: url(../img/bg/Layer_9.png) center/cover no-repeat;
 	position: relative;
+	flex:0 0 auto;
 }
 
 .contact_us__overlay {
@@ -887,6 +994,7 @@ body {
 	font-size: 22px;
 	border: 0;
 	font-weight: 600;
+	white-space: nowrap;
 }
 
 @media (max-width: 1440px) {
@@ -1246,6 +1354,14 @@ body {
 	.container {
 		max-width: none;
 	}
+	.header {
+		display: none;
+	}
+
+	.nav__phone_btn {
+		display: block;
+	}
+
 	.main__prediction {
 	    font-size: 42px;
 	}
@@ -1380,7 +1496,18 @@ body {
 	    flex-direction: column;
 	}
 
+	.portfolio__nav-phone_button {
+		display: block;
+	}
+
 	.portfolio__nav-list {
+		height: 0;
+		overflow: hidden;
+		transition: height 1.2s ease ;
+	}
+
+	.portfolio__nav-list.active {
+		height: 21em;
 	}
 
 	.gallery__images-list {
